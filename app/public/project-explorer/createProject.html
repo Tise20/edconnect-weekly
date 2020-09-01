@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-wdith, initial-scale=1,">
+    <meta charset="utf-8">
+    <title>New Project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="index.html">Project Explorer</a>
+        <input type="text" placeholder="Search Projects" id="search_term"><a> </a>
+        <button type="submit">Search</button><a> </a><a> </a>
+        <a class="lefttButton" href="search.html">Projects</a>
+        <a class="lefttButton" href="createProject.html">Submit</a>
+        <a class="profilerightButton2" href="index.html">Logout</a>
+        <p class="textinbetweenrightbtns">Ade Ade</p>
+        <a class="profilerightButton1" href="profile.html">Signed in as:</a>
+    </div>
+
+    <br>
+    <div id="createprojectheaderText">
+    <h2><strong>Submit Project</strong></h2>
+    </div>
+
+    <div id="newprojectForm">
+        <form>
+            <div class="newprojectbtn-group">
+                <label for="projectName">Project Name</label><br>
+                <input type="text" id="projectName" name="projectName" value="&nbsp;&nbsp;Enter project name" size="105"><br><br>
+                </div>
+                <div class="newprojectbtn-group">
+                <label for="projectAbstract">Project Abstract</label><br>
+                <textarea name="message" rows="10" cols="80"></textarea>
+                </div>
+                <div class="newprojectbtn-group"><br>
+                <label for="authors">Author(s)</label><br>
+                <input type="text" id="authors" name="authors" value="&nbsp;&nbsp;Enter author names (seperated by comma)" size="105"><br><br>
+                </div>
+                <div class="newprojectbtn-group">
+                <label for="tag">Tag(s)</label><br>
+                <input type="text" id="tag" name="tag" value="&nbsp;&nbsp;Use # to tag project with different topics (e.g. #javascript #mongodb)" size="105"><br><br>
+                </div>
+
+                <br>
+                <button class="signupButton" type="submit">Continue</button>
+        </form>    
+    </div>
+
+    <br><br><br>
+    <div class="bottomnav">
+        <p class="blackText">Edconnect</p>
+        <p class="whiteText">Project Explorer © 2020.</p>
+    </div>
+</body>
+</html>
