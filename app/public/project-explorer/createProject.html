@@ -1,56 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-wdith, initial-scale=1,">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>New Project</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="topnav">
-        <a class="active" href="index.html">Project Explorer</a>
-        <input type="text" placeholder="Search Projects" id="search_term"><a> </a>
-        <button type="submit">Search</button><a> </a><a> </a>
-        <a class="lefttButton" href="search.html">Projects</a>
-        <a class="lefttButton" href="createProject.html">Submit</a>
-        <a class="rightButton1" href="register.html">Sign up</a>
-        <a class="rightButton2" href="login.html">Login</a>
-    </div> 
 
-    <br>
-    <div id="createprojectheaderText">
-    <h2><strong>Submit Project</strong></h2>
-    </div>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <a class="navbar-brand" href="#">Project Explorer</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+			<form class = "form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search Projects">
+            </li>
+            <li class="nav-item nav-btn px-3 active">
+                <button class="btn btn-outline-light btn-text-white btn-md">Search</button>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Submit</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="d-inline p-2 bg-primary text-white-50" href="#">Signed in as:</a>
+                <a class="d-inline p-2 bg-primary text-white" href="#">Ade Ade</a>
+                <a class="d-inline p-2 bg-primary text-white-50" href="#">Logout</a>
+            </li>
+           </ul>
+         </ul>
+        </div>
+    </nav>
 
-    <div id="newprojectForm">
-        <form>
-            <div class="newprojectbtn-group">
-                <label for="projectName">Project Name</label><br>
-                <input type="text" id="projectName" name="projectName" value="&nbsp;&nbsp;Enter project name" size="105"><br><br>
+     <br><br><br>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+            <h1 class="h1 mb-4 font-weight-normal text-left">Submit Project</h1>
+            </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group w-75">
+            <h4 class="h4 mb-3 font-weight-normal text-left">Project name</h4>
+            <div class="input-group">
+            <label for="inputprojectName" class="sr-only text-secondary">Enter project name</label>
+            <input type="text" id="inputprojectName" class="form-control" placeholder="Enter project name" required autofocus>
+            </div>
                 </div>
-                <div class="newprojectbtn-group">
-                <label for="projectAbstract">Project Abstract</label><br>
-                <textarea name="message" rows="10" cols="80"></textarea>
                 </div>
-                <div class="newprojectbtn-group"><br>
-                <label for="authors">Author(s)</label><br>
-                <input type="text" id="authors" name="authors" value="&nbsp;&nbsp;Enter author names (seperated by comma)" size="105"><br><br>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group w-75">
+            <h4 class="h4 mb-3 font-weight-normal text-left">Project abstract</h4>
+            <div class="input-group">
+            <textarea rows="6" cols="90"></textarea>
+            </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group w-75">
+            <h4 class="h4 mb-3 font-weight-normal text-left">Author(s)</h4>
+            <div class="input-group">
+            <label for="inputAuthors" class="sr-only text-secondary">Enter author names (seperated by comma)</label>
+            <input type="text" id="inputAuthors" class="form-control" placeholder="Enter author names (seperated by comma)" required autofocus>
+            </div>
                 </div>
-                <div class="newprojectbtn-group">
-                <label for="tag">Tag(s)</label><br>
-                <input type="text" id="tag" name="tag" value="&nbsp;&nbsp;Use # to tag project with different topics (e.g. #javascript #mongodb)" size="105"><br><br>
                 </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group w-75">
+            <h4 class="h4 mb-3 font-weight-normal text-left">Tag(s)</h4>
+            <div class="input-group">
+            <label for="inputTags" class="sr-only text-secondary">Use # to tag project with different topics (e.g. #javascript #mongodb)</label>
+            <input type="text" id="inputTags" class="form-control" placeholder="Use # to tag project with different topics (e.g. #javascript #mongodb)" required autofocus>
+                </div>
+                    </div>
+                    </div>
+            </div>
+            <button class="btn btn-lg btn-primary btn-small ml-4" type="submit">Continue</button>
+        </div>
+      </div>
+      
+      <br><br>
+    <footer>
+      <nav class="navbar navbar-expand-md mx-auto navbar-light sticky-bottom bg-light" style="width: 75%;"> 
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#second-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="second-navigation">
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <div class="footer-copyright text-secondary ml-auto">Project Explorer © 2020.</div>
+            </li>
+             <li class="nav-item active">
+              <div class="footer-copyright text-dark ml-auto">Edconnect</div>
+             </li>
+         </ul>
+        </div>
+      </nav>
+      </footer>
 
-                <br>
-                <button class="signupButton" type="submit">Continue</button>
-        </form>    
-    </div>
-
-    <br><br><br>
-    <div class="bottomnav">
-        <p class="blackText">Edconnect</p>
-        <p class="whiteText">Project Explorer © 2020.</p>
-    </div>
 </body>
 </html>

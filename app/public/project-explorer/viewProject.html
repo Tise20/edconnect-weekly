@@ -1,88 +1,163 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-wdith, initial-scale=1,">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>View Project</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="topnav">
-        <a class="active" href="index.html">Project Explorer</a>
-        <input type="text" placeholder="Search Projects" id="search_term"><a> </a>
-        <button type="submit">Search</button><a> </a><a> </a>
-        <a class="lefttButton" href="search.html">Projects</a>
-        <a class="lefttButton" href="createProject.html">Submit</a>
-        <a class="rightButton1" href="register.html">Sign up</a>
-        <a class="rightButton2" href="login.html">Login</a>
-    </div> 
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <a class="navbar-brand" href="#">Project Explorer</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+			<form class = "form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search Projects">
+            </li>
+            <li class="nav-item nav-btn px-3 active">
+                <button class="btn btn-outline-light btn-text-white btn-md">Search</button>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Submit</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="d-inline p-2 bg-primary text-white-50" href="#">Signed in as:</a>
+                <a class="d-inline p-2 bg-primary text-white" href="#">Ade Ade</a>
+                <a class="d-inline p-2 bg-primary text-white-50" href="#">Logout</a>
+            </li>
+           </ul>
+         </ul>
+        </div>
+    </nav> 
 
-    <br>
-    <div id="viewprojectheaderText">
-    <h2><strong>Project 4</strong></h2>
-    </div>
-
-    <div class="viewprofileContainer">
+    <br><br><br>
+    <div class="container">
         <div class="row">
-            <div class="column-left">
-                <p>Created By</p>
-                <p>Ade Ade</p>
+              <div class="col-lg-12 col-md-12 col-sm-12"> 
+                <h4 class="header-text text-black text-left mx-auto pl-5">Project 4</h4>
+              </div>
             </div>
-            <div class="column-center">
-                <p>Date Created</p>
-                <p>2020-08-04</p>
+        </div> 
+        <br>
+        <div class="jumbotron mx-auto my-container w-50 pt-3 pb-2">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <h5>Created By</h5>
+                <h5>Ade Ade</h5>
             </div>
-            <div class="column-center2">
-                <p>Last Updated</p>
-                <p>2020-08-04</p>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <h5>Date Created</h5>
+                <h5>2020-09-04</h5>
             </div>
-            <div class="column-right">
-               <a><button class="editprojectBtn" type="submit" href="editProject.html">Edit Project</button></a>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <h5>Last Updated</h5>
+                <h5>2020-09-04</h5>
             </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <button class="btn  btn-primary btn-medium" type="submit">Edit Project</button>    
+             </div>
+          </div>
         </div>
     </div>    
 
     <br>
-      <div id="viewprojectForm">
+      <div id="editprojectForm">
         <form>
-                <div class="viewprojectbtn-group">
-                <h2>Project Abstract</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group">
+                    <h4 class="h4 mb-3 font-weight-normal text-left">Project Abstract</h4>
+                    <hr width="540px">
+                    </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group">
+                    <h4 class="h4 mb-3 font-weight-normal text-left">Project Details</h4>
+                    <hr width="540px">
+                    </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="form-group">
+                    <p>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque
+                     libero, fermentum et maximus ut, cursus sit amet neque. Suspendisse 
+                     vel cursus purus. Nam mollis fermentum turpis, eget gravida justo 
+                     eget. Nam mollis laoreet nisl, a sodales leo sollicitudin vitae. 
+                     Etiam sed hendrerit justo. Nullam aliquet dolor at mi consequat, 
+                     eget molestie tortor mollis. Praesent augue lorem, dignissim vitae 
+                     ultricies tincidunt, sagittis accumsan metus. Duis in sapien ac erat 
+                     porta aliquet. Quisque efficitur vel sem ut rhoncus. Aliquam id urna.</p>
+                    </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="form-group">
+                    <div class="card">
+                    <div class="card-header font-weight-bold">Author(s)</div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item pt-2 pb-4 text-weight-large text-left">Henry James</li>
+                    <li class="list-group-item pt-2 pb-4 text-weight-large text-left">Bola Ade</li>
+                    </ul>
+                    <div class="card-footer text-left text-primary">#javascript, #mongodb</div>
+                    </div>   
+                    </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="form-group">
+                    <h4 class="h4 font-weight-normal text-left">Comments</h4>
+                    <div class="input-group border-white">
+                    <textarea name="comment" class="textInTextArea text-muted pl-2 pt-1" rows="3" cols="70">Leave a comment</textarea>
+                    </div>
+                    </div>
+                   </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="form-group">
+                    <div class="card">
+                    <div class="card-header font-weight-bold">Project files</div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item pt-2 pb-4 text-center">No file uploaded yet</li>
+                    </ul>
+                    </div>
+                    </div>
+                    </div>
+                    <br>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    <button class="btn btn-lg btn-primary btn-small ml-2" type="submit">Submit</button>
+                     <hr>
+                     <h6 class="lastText text-center">No comments added yet</h6>
+                    </div>
                 </div>
-                <div class="viewprojectbtn-group">
-                <h2>Project Details</h2>
-                </div>
-                <div class="viewprojectbtn-group">
-                <hr>
-                </div>
-                <div class="viewprojectbtn-group">
-                <hr>
-                </div>
-                <div class="viewprojectbtn-group">
-                <pre>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque
-libero, fermentum et maximus ut, cursus sit amet neque. Suspendisse
-vel cursus purus. Nam mollis fermentum turpis, eget gravida justo aliquet 
-eget. Nam mollis laoreet nisl, a sodales leo sollicitudin vitae. Etiam 
-sed hendrerit justo. Nullam aliquet dolor at mi consequat, eget molestie 
-tortor mollis. Praesent augue lorem, dignissim vitae ultricies tincidunt, 
-sagittis accumsan metus. Duis in sapien ac erat porta aliquet. Quisque.
-                </pre>
-                </div>
-                <div class="viewprojectbtn-group">
-                    <button class="viewprojectBtn1" type="submit">&nbsp;&nbsp;Author(s)</button>
-                    <button class="viewprojectBtn2" type="submit">&nbsp;&nbsp;Henry James</button>
-                    <button class="viewprojectBtn3" type="submit">&nbsp;&nbsp;Bola Ade</button>
-                    <button class="viewprojectBtn4" type="submit">&nbsp;&nbsp;#yaml #ejs</button>
-                    <button class="viewprojectBtn5" type="submit">&nbsp;&nbsp;Project files</button>
-                    <button class="viewprojectBtn6" type="submit">&nbsp;&nbsp;No file uploaded yet</button>
-                </div>
-            </form>
+            </div>
+        </form>
       </div>
 
     <br><br><br>
-    <div class="bottomnav">
-      <p class="blackText">Edconnect</p>
-      <p class="whiteText">Project Explorer © 2020.</p>
-    </div>
+    <footer>
+        <nav class="navbar navbar-expand-md mx-auto navbar-light sticky-bottom bg-light" style="width: 75%;"> 
+          <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#second-navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="second-navigation">
+           <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <div class="footer-copyright text-secondary ml-auto">Project Explorer © 2020.</div>
+              </li>
+               <li class="nav-item active">
+                <div class="footer-copyright text-dark ml-auto">Edconnect</div>
+               </li>
+           </ul>
+          </div>
+        </nav>
+        </footer>
 </body>
 </html>

@@ -1,95 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-wdith, initial-scale=1,">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Search</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="topnav">
-        <a class="active" href="index.html">Project Explorer</a>
-        <input type="text" placeholder="Search Projects" id="search_term"><a> </a>
-        <button type="submit">Search</button><a> </a><a> </a>
-        <a class="lefttButton" href="search.html">Projects</a>
-        <a class="lefttButton" href="createProject.html">Submit</a>
-        <a class="rightButton1" href="register.html">Sign up</a>
-        <a class="rightButton2" href="login.html">Login</a>
-    </div> 
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <a class="navbar-brand" href="#">Project Explorer</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+			<form class = "form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search Projects">
+            </li>
+            <li class="nav-item nav-btn px-3 active">
+                <button class="btn btn-outline-light btn-text-white btn-md">Search</button>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Submit</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="d-inline p-2 bg-primary text-white-50" href="#">Signed in as:</a>
+                <a class="d-inline p-2 bg-primary text-white" href="#">Ade Ade</a>
+                <a class="d-inline p-2 bg-primary text-white-50" href="#">Logout</a>
+            </li>
+           </ul>
+         </ul>
+        </div>
+    </nav>
     
-    <br>
-    <div id="Searchtext">
-    <h2><strong>Project Gallery</strong></h2>
-    </div>
 
-    <div class="middlenav">
-        <input type="text" placeholder="Search project name, authors, abstract, tags" id="search_term2"><a></a>
-        <button class="searchbyBtn" type="submit">Search by</button>
-        <select id="searchName" name="searchName">
-            <option value="Name">&nbsp;&nbsp;Name</option>
-            <option value="Bola Ade">Bola Ade</option>
-            <option value="Henry James">Henry James</option>
-            <option value="Ben Rice">Ben Rice</option>
-            <option value="Ade Sola">Ade Sola</option>
-            <option value="Tola Daniel">Tola Daniel</option>
-            <option value="Fried Lim">Fried Lim</option>
-            <option value="Ade Brian">Ade Brian</option>
-            <option value="James Li">James Li</option>
-        </select>
-        <button class="projectgalleryBtn" type="submit">Submit</button>
-    </div>
-   
-    <br><br>
-    <div class="container2">
-    <div class="row">
-        <div class="column">
-            <h3>Project 1</h3>
-            <h4>James Li, Ade Brian</h4>
-            <p>Lorem ipsum dolor sit amet,
-               consectetur adipisicing elit,
-               Facere tenetur nihil velit 
-               placeat possimus dignissimos officia sequi
-               doloremque itaque</p>
-            <h5>#javascript, #mongodb</h5>
-        </div>
-        <div class="column">
-            <h3>Project 2</h3>
-            <h4>Fried Lim, Tola Daniel</h4>
-            <p>Lorem ipsum dolor sit amet,
-               consectetur adipisicing elit,
-               Facere tenetur nihil velit 
-               placeat possimus dignissimos officia sequi
-               doloremque itaque</p>
-            <h5>#ejs, #ci</h5>
-        </div>
-        <div class="column">
-            <h3>Project 3</h3>
-            <h4>Ben Rice, Ade Sola</h4>
-            <p>Lorem ipsum dolor sit amet,
-               consectetur adipisicing elit,
-               Facere tenetur nihil velit 
-               placeat possimus dignissimos officia sequi
-               doloremque itaque</p>
-            <h5>#css, #html</h5>
-        </div>
-        <div class="column">
-            <h3>Project 4</h3>
-            <h4>Henry James, Bola Ade</h4>
-            <p>Lorem ipsum dolor sit amet,
-               consectetur adipisicing elit,
-               Facere tenetur nihil velit 
-               placeat possimus dignissimos officia sequi
-               doloremque itaque</p>
-            <h5>#yaml, #ejs</h5>
-        </div>
-      </div> 
-    </div>
+        <h3>Project Gallery</h3>
+        <br><br>
+    <section>
+        <div class="container w-50 p-3">
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline" action="/action_page.php">
+            <div class="form-row">
+            <input class="form-control-lg w-100 mr-3 mr-sm-2" width="105px" type="text" placeholder="Search project name, authors, abstract, tags" aria-label="Search project name, authors, abstract, tags">
+            </div>
+            <div class="form-row">
+        <a class="nav-item nav-btn  active form-inline">
+            <button class="btn btn-outline-secondary btn-md">Search by</button>
+            </div>
+            <div class="form-row">
+            <select class="form-control-lg" id="name">
+                <option>Name</option>
+                <option>Project 1</option>
+                <option>Project 2</option>
+                <option>Project 3</option>
+                <option>Project 4</option>
+            </select>
+        </a>
+            </div>
+            <div class="form-row">
+           <a href="#" class="btn btn-lg btn-primary my-2">Submit</a>  
+           </div>
+       </form>
+      </section>
+ <br><br>
+  
+ <h2 class="projectsresult d-inline text-black text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Projects</h2>
+ <h5 class="projectsresult d-inline text-muted text-left">(1 result)</h5>
 
-    <br><br><br>
-    <div class="bottomnav">
-        <p class="blackText">Edconnect</p>
-        <p class="whiteText">Project Explorer © 2020.</p>
-    </div>
+ <div class="projects py-5">
+    <div class="container">
+    <div class="row justify-content-between align-items-left">
+        <div class="col ml-n7 order-4 py-3 lg-2 col-md-3 col-sm-12 border bg-white">
+          <h6 class="firstText d-outline text-primary">a</h6>
+          <h6 class="secondText d-outline text-muted">dsad</h6>
+          <h6 class="thirdText d-outline text-black">dsa</h6>
+          <h6 class="fourthText d-outline text-primary">#ds</h6>
+      </div>
+     </div> 
+  </div>
+</div>
 </body>
+
+<br><br>
+<footer>
+  <nav class="navbar navbar-expand-md mx-auto navbar-light sticky-bottom bg-light" style="width: 75%;"> 
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#second-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="second-navigation">
+     <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <div class="footer-copyright text-secondary ml-auto">Project Explorer © 2020.</div>
+        </li>
+         <li class="nav-item active">
+          <div class="footer-copyright text-dark ml-auto">Edconnect</div>
+         </li>
+     </ul>
+    </div>
+  </nav>
+  </footer>
 </html>

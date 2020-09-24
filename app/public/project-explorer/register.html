@@ -1,85 +1,154 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-wdith, initial-scale=1,">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Signup</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="topnav">
-        <a class="active" href="index.html">Project Explorer</a>
-        <input type="text" placeholder="Search Projects" id="search_term"><a> </a>
-        <button type="submit">Search</button><a> </a><a> </a>
-        <a class="lefttButton" href="search.html">Projects</a>
-        <a class="lefttButton" href="createProject.html">Submit</a>
-        <a class="rightButton1" href="register.html">Sign up</a>
-        <a class="rightButton2" href="login.html">Login</a>
-    </div> 
-    
-    <br>
-    <div id="signupDetails">
-    <h2><strong>Sign up</strong></h2>
-    </div>
-
-    <div id="signupForm">
-        <form>
-            <div class="signupbtn-group">
-            <label for="fName">First Name</label><br>
-            <input type="text" id="fName" name="fName" value="&nbsp;&nbsp;First name" size="55"><br><br>
-            </div>
-            <div class="signupbtn-group">
-            <label for="lName">Last Name</label><br>
-            <input type="text" id="lName" name="lName" value="&nbsp;&nbsp;Last name" size="55"><br><br>
-            </div>
-            <div class="signupbtn-group">
-            <label for="email">Email Address</label><br>
-            <input type="email" id="email" name="email" value="&nbsp;&nbsp;Your Email address" size="55"><br><br>
-            </div>
-            <div class="signupbtn-group">
-            <label for="password">Password</label><br>
-            <input type="password" id="password" name="password" value="&nbsp;&nbsp;Your Password" size="55"><br><br>
-            </div>
-            <div class="signupbtn-group">
-            <label for="program">Program</label><br>
-            <select id="program" name="program">
-                <option value="Choose...">&nbsp;&nbsp;Choose...</option>
-                <option value="Computer Science">Computer Science</option>
-                <option value="Computer Information Systems">Computer Information Systems</option>
-                <option value="Public Health">Public Health</option>
-            </select><br><br>
-            </div>
-            <div class="signupbtn-group">
-            <label for="matricNo">Matriculation Number</label><br>
-            <input type="text" id="matricNo" name="matricNo" value="&nbsp;&nbsp;e.g. 16/2020" size="27"><br><br>
-            </div>
-            <div class="signupbtn-group">
-            <label for="gradYear">Graduation Year</label><br>
-            <select id="gradYear" name="gradYear">
-                <option value="Choose...">&nbsp;&nbsp;Choose...</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
-                <option value="2014">2014</option>
-                <option value="2013">2013</option>
-                <option value="2012">2012</option>
-                <option value="2011">2011</option>
-                <option value="2010">2010</option>
-            </select>
-            </div>
-            <br><br>
-            <button class="signupButton" type="submit">Sign up</button>
-        </form>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <a class="navbar-brand" href="#">Project Explorer</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+			<form class = "form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search Projects">
+            </li>
+            <li class="nav-item nav-btn px-3 active">
+                <button class="btn btn-outline-light btn-text-white btn-md">Search</button>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Submit</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="d-inline p-2 bg-primary text-white" href="#">Sign up</a>
+                <a class="d-inline p-2 bg-primary text-white" href="#">Login</a>
+            </li>
+           </ul>
+         </ul>
         </div>
-    
-        <br><br><br>
-        <div class="bottomnav">
-            <p class="blackText">Edconnect</p>
-            <p class="whiteText">Project Explorer © 2020.</p>
-        </div> 
-</body>
+    </nav>
+
+    <br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="form-group">
+            <h1 class="h1 mb-4 font-weight-normal text-left">Sign up</h1>
+            </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+            <h4 class="h4 mb-3 font-weight-normal text-left">First name</h4>
+            <div class="input-group">
+            <label for="inputName" class="sr-only text-secondary">First name</label>
+            <input type="text" id="inputName" class="form-control" placeholder="First name" required autofocus style="width: 600px;">
+            </div>
+                </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+            <h4 class="h4 mb-3 font-weight-normal text-left">Last name</h4>
+            <div class="input-group">
+            <label for="inputlastName" class="sr-only text-secondary">Last name</label>
+            <input type="text" id="inputlastName" class="form-control" placeholder="Last name" required autofocus style="width: 600px;">
+            </div>
+                </div>
+                </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+            <h4 class="h4 mb-3 font-weight-normal text-left">Email Address</h4>
+            <div class="input-group">
+            <label for="inputEmail" class="sr-only text-secondary">Your Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Your Email address" required autofocus style="width: 600px;">
+            </div>
+            </div>
+           </div>
+             <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+            <h4 class="h4 mb-3 font-weight-normal text-left">Password</h4>
+            <div class="input-group">
+            <label for="inputPassword" class="sr-only text-secondary">Your Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Your Password" required autofocus style="width: 600px;">
+            </div>
+                </div>
+                </div>
+            <div class="col-lg-6 col-md-5 col-sm-6">
+                    <div class="form-group">
+            <h5 class="h5 mb-3 font-weight-normal text-left">Program</h5>
+            <div class="input-group">
+                   <select class="form-control" id="sel1">
+                       <option text-disabled>Choose...</option>
+                       <option>Computer Science</option>
+                       <option>Public Health</option>
+                       <option>Computer Information Systems</option>
+                   </select>
+                </div>
+                </div>
+                </div>
+            <div class="col-lg-3 col-md-4 col-sm-3">
+            <div class="form-group w-80">
+            <h5 class="h5 mb-3 font-weight-normal">Matriculation number</h5>
+            <div class="input-group">
+            <label for="inputMatricno" class="sr-only text-secondary">e.g. 16/2020</label>
+            <input type="text" id="inputMatricno" class="form-control" placeholder="e.g. 16/2020" required autofocus style="width: 600px;">
+                </div>
+                    </div>
+                </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="form-group">
+            <h5 class="h5 mb-3 font-weight-normal text-left">Graduation Year</h5>
+            <div class="input-group">
+                <select class="form-control" id="sel2">
+                    <option text-disabled>Choose...</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2014</option>
+                    <option>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                    <option>2010</option>
+                </select>
+                </div>
+                    </div>
+                </div>
+                 
+            
+        
+            <button class="btn btn-lg btn-primary btn-small ml-3" type="submit">Sign up</button>
+        </div>
+    </div>
+    <br><br>
+    <footer>
+      <nav class="navbar navbar-expand-md mx-auto navbar-light sticky-bottom bg-light" style="width: 65%;"> 
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#second-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="second-navigation">
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <div class="footer-copyright text-secondary ml-auto">Project Explorer © 2020.</div>
+            </li>
+             <li class="nav-item active">
+              <div class="footer-copyright text-dark ml-auto">Edconnect</div>
+             </li>
+         </ul>
+        </div>
+      </nav>
+      </footer>
+    </body>
 </html>
